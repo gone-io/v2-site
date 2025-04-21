@@ -1,6 +1,8 @@
 # Gone 框架的服务注册与发现：打造高效微服务架构
 > 本文深入探讨Gone框架中服务注册与发现的实现机制，介绍其在微服务架构中解决动态通信、负载均衡和高可用等核心问题的方式。文章详细阐述了Gone如何优雅集成Nacos、Consul和Etcd等服务治理组件，提供了实战示例和原理解析，并说明了自定义组件的开发方法，为Go开发者提供完整的微服务治理解决方案。
+>
 > 关键词：微服务架构、服务注册与发现、Gone框架、负载均衡、服务治理
+>
 > 项目地址：
 > - [gone-io/goner](https://github.com/gone-io/goner)
 > - [gone-io/gone](https://github.com/gone-io/gone)
