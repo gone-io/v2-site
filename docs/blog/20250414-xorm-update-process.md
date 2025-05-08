@@ -1,10 +1,10 @@
 # 使用gone v2 的Provider 机制升级改造 goner/xorm 的过程记录
 > Gone 是作者开发的基于标签的依赖注入框架，给golang提供了一种简单、灵活、可扩展的依赖注入方式，将长期维护并持续优化。
-> 
+>
 > 项目地址：[github.com/gone-io/gone](https://github.com/gone-io/gone)
-> 
+>
 > Goner 是基于Gone框架的一个子项目，提供了基于依赖注入封装的一些列组件，如：配置读取、日志输出、数据库访问、大模型接入等。
-> 
+>
 > 项目地址：[github.com/gone-io/goner](https://github.com/gone-io/goner)
 
 
@@ -210,7 +210,7 @@ func (s* dbUser)Query(){
 3. 使用`eng` 封装`xorm.EngineInterface`，实现原来`goner/xorm`中定义的的`Engine`接口，完成事务增强和SQL拼接增强；
 4. 使用`engProvider`为系统提供`goner/xorm.Engine`类型实例。
 
-![](xorm_design.png)
+![](20250414-xorm-update-process_design.png)
 
 ## 实现
 
@@ -420,7 +420,7 @@ func (e *trans) Transaction(fn func(session Interface) error) error {
                 err = gone.ToError(err)
                 return
             }
-            
+
             // 执行用户函数
             err = gone.ToError(fn(session))
             if err == nil {
@@ -549,7 +549,7 @@ func (s *engProvider) Provide(tagConf string, t reflect.Type) (any, error) {
 // 根据标签配置提供Engine实例
 func (s *engProvider) ProvideEngine(tagConf string) (Engine, error) {
     m, _ := gone.TagStringParse(tagConf)
-    
+
     // 处理master标记
     if v, ok := m[masterKey]; ok && (v == "" || cast.ToBool(v)) {
         group, err := s.xProvider.ProvideEngineGroup(tagConf)
@@ -558,7 +558,7 @@ func (s *engProvider) ProvideEngine(tagConf string) (Engine, error) {
         }
         return newEng(group.Master(), s.logger), nil
     }
-    
+
     // 处理slave标记
     if index, ok := m[slaveKey]; ok {
         i := cast.ToInt(index)
@@ -601,7 +601,7 @@ func (s *engProvider) ProvideEngine(tagConf string) (Engine, error) {
 测试覆盖率
 
 如图所示，改造后的代码测试覆盖率得到了显著提升。
-![](xorm_codecov.png)
+![](20250414-xorm-update-process_codecov.png)
 
 ### 下面是部分测试代码，展示了如何测试xormProvider：
 
