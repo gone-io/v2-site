@@ -1,4 +1,27 @@
-# goner/otel 在Gone框架接入OpenTelemetry
+---
+slug: goner-otel-integration-guide
+description: 本文详细介绍如何在Gone框架中集成OpenTelemetry，实现分布式追踪、指标收集和日志管理。通过goner/otel组件，让您的微服务轻松具备完整的可观测性能力，包含实战示例和最佳实践指南。
+keywords:
+  - OpenTelemetry
+  - Gone框架
+  - 可观测性
+  - 分布式追踪
+  - 性能监控
+  - 微服务监控
+  - Go语言
+  - 云原生
+  - 系统监控
+  - 日志管理
+tags:
+  - OpenTelemetry
+  - Gone
+  - 可观测性
+  - 技术实践
+date: 2025-05-08T11:50
+---
+
+# 使用goner/otel接入OpenTelemetry
+
 
 ## 背景与意义
 [OpenTelemetry](https://opentelemetry.io/) 是当前云原生领域事实标准的可观测性框架，支持分布式追踪、指标和日志的采集与导出。它帮助开发者在微服务架构下快速定位问题、分析性能瓶颈。
@@ -10,7 +33,7 @@
 本文将详细介绍如何通过 [goner/otel](https://github.com/gone-io/goner/tree/main/otel) 组件，在 Gone 框架中优雅集成 OpenTelemetry，并给出实用代码示例、常见问题解答及最佳实践。
 
 ## 快速上手：五步集成 OpenTelemetry
-![](./202505081121-otel-goner-01.gif)
+![](/img/202505081121-otel-goner-01.gif)
 
 1. 安装 gonectl 脚手架工具：
 ```bash
@@ -216,7 +239,7 @@ otel:
             insecure: true
 ```
 3. 移除`goner/otel/tracer`组件，执行`gonectl install goner/otel/tracer`命令，去掉`goner/otel/tracer`的勾选：
-![](./202505081121-otel-goner-02.png)
+![](/img/202505081121-otel-goner-02.png)
 
 4. 运行demo项目：`go run .`，这次链路信息没有打印到控制台，而是被发送到了Jaeger，所以看到程序直接退出了。
 
@@ -224,8 +247,8 @@ otel:
 打开浏览器，访问 [Jaeger UI 查看链路数据
 打开Jaeger UI 查看链路数据
 打开浏览器，访问 [http://localhost:16686](http://localhost:16686)：
-![](./202505081121-otel-goner-03.png)
-![](./202505081121-otel-goner-04.png)
+![](/img/202505081121-otel-goner-03.png)
+![](/img/202505081121-otel-goner-04.png)
 
 
 ### 常见问题解答（FAQ）

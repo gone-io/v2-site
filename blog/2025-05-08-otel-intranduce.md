@@ -1,8 +1,27 @@
 ---
-title: OpenTelemetry 介绍
-keywords: [OpenTelemetry, 可观测性, 分布式追踪, 指标, 日志, Tracing, Metrics, Logs, Jaeger, Prometheus, Zipkin, OTLP, Collector, 自动插桩, SDK, API, 云原生, CNCF, 监控, 采样, 导出器, 生态系统, 集成, 生产可用, 多语言支持]
-description: 本文系统介绍了OpenTelemetry的核心概念、发展历史、主要特点与优势、关键组件（API、SDK、Collector、导出器）、与主流后端（如Jaeger、Prometheus、Zipkin）的集成方式，以及在云原生环境下的应用价值。适合希望了解和落地可观测性体系的开发者与运维人员。
+slug: opentelemetry-introduction-guide
+description: 深入解析OpenTelemetry的核心概念、架构设计和最佳实践。本文全面介绍这个云原生领域的可观测性标准，包括追踪、指标和日志的统一管理，以及与Jaeger、Prometheus等工具的集成应用。
+keywords:
+  - OpenTelemetry
+  - 可观测性
+  - 云原生
+  - 分布式追踪
+  - 性能监控
+  - 日志管理
+  - CNCF
+  - Jaeger
+  - Prometheus
+  - 微服务监控
+tags:
+  - OpenTelemetry
+  - 云原生
+  - 可观测性
+  - 技术架构
+date: 2025-05-08T08:00
 ---
+
+# OpenTelemetry介绍
+
 
 ## 1. 概述
 ### 什么是OpenTelemetry
@@ -10,11 +29,11 @@ OpenTelemetry是一个观测性框架和工具包，旨在创建和管理遥测�
 
 > 上面是OpenTelemetry的官方介绍，说人话就是：
 > OpenTelemetry就像是你应用的"体检中心"，它能自动收集应用的各项指标(心跳、血压)、追踪请求链路(看病流程)、记录日志(病历)，并把数据统一格式发给各种监控系统(Prometheus、Jaeger等)。上面这些在OpenTelemetry项目之前都是由各个厂商自己开发的，现在OpenTelemetry把这些功能都集成到一起，方便开发者使用。作为一个行业标准，OpenTelemetry 得到了[40多个可观测性供应商](https://opentelemetry.io/ecosystem/vendors/)的支持，被许多 [库、服务和应用程序](https://opentelemetry.io/ecosystem/integrations)集成，并被[众多终端用户](https://opentelemetry.io/ecosystem/adopters)采用。
-> ![](./20250508-otel-intranduce-00.png)
+> ![](/img/20250508-otel-intranduce-00.png)
 
 
 ### 发展历史与背景
-![](./20250508-otel-intranduce-01.png)
+![](/img/20250508-otel-intranduce-01.png)
 
 - Google 2010年发布的 Dapper 论文是分布式链路追踪的开端
 - 2012年 Twitter 开源了 Zipkin
@@ -112,7 +131,7 @@ OpenTelemetry是一个观测性框架和工具包，旨在创建和管理遥测�
 - 跨服务调试信息传递
 
 > 关于Tracing、Metrics和Logging之间的关系：
-> ![](./20250508-otel-intranduce-02.png)
+> ![](/img/20250508-otel-intranduce-02.png)
 > 三者相互关联，共同提供完整的系统观测能力。追踪提供调用链视角，指标提供系统状态概览，日志提供详细上下文。通过统一的标识符（如TraceID），可以在三种数据间无缝导航。
 
 ## 3. 主要组件
@@ -179,7 +198,7 @@ Collector是OpenTelemetry的中央枢纽，专门处理观测数据的收集、�
 3. **导出器(Exporters)**: 相当于专业快递员，将数据准确送达各监控系统
 4. **扩展(Extensions)**: 类似插件系统，提供健康检查等辅助功能
 
-![](./20250508-otel-intranduce-03.png)
+![](/img/20250508-otel-intranduce-03.png)
 
 **为什么Collector值得拥有**：
 - 集中处理遥测数据，应用服务器可以专注于业务逻辑

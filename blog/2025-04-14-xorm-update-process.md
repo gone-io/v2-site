@@ -1,39 +1,23 @@
-# 使用gone v2 的Provider 机制升级改造 goner/xorm 的过程记录
-> Gone 是作者开发的基于标签的依赖注入框架，给golang提供了一种简单、灵活、可扩展的依赖注入方式，将长期维护并持续优化。
->
-> 项目地址：[github.com/gone-io/gone](https://github.com/gone-io/gone)
->
-> Goner 是基于Gone框架的一个子项目，提供了基于依赖注入封装的一些列组件，如：配置读取、日志输出、数据库访问、大模型接入等。
->
-> 项目地址：[github.com/gone-io/goner](https://github.com/gone-io/goner)
+---
+slug: xorm-update-process
+description: 本文详细记录了使用Gone框架的Provider机制重构goner/xorm组件的过程。通过统一使用Provider机制实现，优化了代码结构，提高了可维护性和测试覆盖率，同时保持了原有功能和配置的兼容性。文章涵盖了重构的动机、目标、设计方案、实现细节和测试策略。
+keywords: ["依赖注入", "数据库访问", "代码重构", "Provider模式", "xorm", "Gone框架", "测试覆盖率", "事务管理", "SQL拼接", "代码优化"]
+tags:
+  - xorm
+  - gone
+  - 数据库访问
+  - 代码重构
+  - 测试覆盖率
+  - 事务管理
+---
 
-
-- [使用gone v2 的Provider 机制升级改造 goner/xorm 的过程记录](#使用gone-v2-的provider-机制升级改造-gonerxorm-的过程记录)
-  - [缘起](#缘起)
-    - [1.原来的设计比较复杂](#1原来的设计比较复杂)
-    - [2.测试不够友好，比较难做覆盖。](#2测试不够友好比较难做覆盖)
-  - [目标](#目标)
-    - [1. 保证配置兼容改造前的，保证注入方式兼容改造前的](#1-保证配置兼容改造前的保证注入方式兼容改造前的)
-    - [2. 提供的功能不能改变](#2-提供的功能不能改变)
-      - [2.1 增强事务支持](#21-增强事务支持)
-      - [2.2 增强SQL拼接能力](#22-增强sql拼接能力)
-    - [3. 采用v2版本的Provider机制来统一实现](#3-采用v2版本的provider机制来统一实现)
-    - [4. 优化代码设计，使职责更清晰，边界更分明](#4-优化代码设计使职责更清晰边界更分明)
-  - [设计](#设计)
-  - [实现](#实现)
-    - [1. 实现xormProvider及相关Provider](#1-实现xormprovider及相关provider)
-    - [2. 实现事务增强功能](#2-实现事务增强功能)
-    - [3. 实现Engine封装](#3-实现engine封装)
-    - [4. 实现Engine提供者](#4-实现engine提供者)
-  - [测试](#测试)
-    - [测试覆盖率](#测试覆盖率)
-    - [下面是部分测试代码，展示了如何测试xormProvider：](#下面是部分测试代码展示了如何测试xormprovider)
-  - [总结](#总结)
-
+# 使用Provider机制改造goner/xorm
 
 
 ## 缘起
+
 最近在给 [goner](https://github.com/gone-io/goner)增加测试代码，提高项目的测试覆盖率。改到`goner/xorm`时，发现存在两个主要问题：
+
 ### 1.原来的设计比较复杂
 goner/xorm是gone框架中较早提供的组件，其演进历程如下：
 
@@ -210,7 +194,7 @@ func (s* dbUser)Query(){
 3. 使用`eng` 封装`xorm.EngineInterface`，实现原来`goner/xorm`中定义的的`Engine`接口，完成事务增强和SQL拼接增强；
 4. 使用`engProvider`为系统提供`goner/xorm.Engine`类型实例。
 
-![](20250414-xorm-update-process_design.png)
+![](../static/img/20250414-xorm-update-process_design.png)
 
 ## 实现
 
@@ -601,7 +585,7 @@ func (s *engProvider) ProvideEngine(tagConf string) (Engine, error) {
 测试覆盖率
 
 如图所示，改造后的代码测试覆盖率得到了显著提升。
-![](20250414-xorm-update-process_codecov.png)
+![](../static/img/20250414-xorm-update-process_codecov.png)
 
 ### 下面是部分测试代码，展示了如何测试xormProvider：
 
