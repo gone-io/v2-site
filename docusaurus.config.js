@@ -90,9 +90,21 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'quickstart',
             position: 'left',
-            label: 'Tutorial',
+            label: '快速开始',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorial',
+            position: 'left',
+            label: '指南',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'components',
+            position: 'left',
+            label: '组件',
           },
           {
             to: '/blog',
@@ -112,47 +124,39 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
+        // links: [
+        //   {
+        //     title: '文档',
+        //     items: [
+        //       {
+        //         label: '开放指南',
+        //         to: '/docs/tutorial',
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: 'Community',
+        //     items: [
+        //       {
+        //         label: 'Stack Overflow',
+        //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //       }
+        //     ],
+        //   },
+        //   {
+        //     title: 'More',
+        //     items: [
+        //       {
+        //         label: '博客',
+        //         to: '/blog',
+        //       },
+        //       {
+        //         label: '组件库',
+        //         href: 'https://github.com/gone-io/goner',
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} Gone Docs, Inc. Built with Docusaurus.`,
       },
       prism: {

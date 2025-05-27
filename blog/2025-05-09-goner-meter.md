@@ -431,7 +431,7 @@ volumes:
   grafana-storage:
 ```
 
-然后，我们可以访问Grafana界面（http://localhost:3000），配置Prometheus数据源，并创建自定义仪表盘。
+然后，我们可以访问Grafana界面（ http://localhost:3000 ），配置Prometheus数据源，并创建自定义仪表盘。
 
 ## 最佳实践
 
