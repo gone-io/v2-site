@@ -1,7 +1,6 @@
 ---
 sidebar_position: 2
 hide_title: true
-slug: /quickstart/simple
 title: 极简项目
 keywords: [Gone框架, Go语言, Hello World, 入门教程, 依赖注入, 日志组件]
 description: 通过一个简单的Hello World程序，快速上手Gone框架的核心功能，包括依赖注入和日志记录。适合Gone框架初学者。

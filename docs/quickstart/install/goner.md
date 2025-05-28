@@ -28,6 +28,8 @@ gonectl install goner/<组件名>
 gonectl install goner/gin
 ```
 
+官方已经支持的组件列表：[goner](https://github.com/gone-io/goner)
+
 ### 安装第三方goner组件库中的组件
 ```bash
 gonectl install <第三方组件仓库地址>

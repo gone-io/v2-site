@@ -1,7 +1,6 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 hide_title: true
-slug: /quickstart/web
 title: 搭建一个Web项目
 keywords: [Gone, QuickStart, Go, Web框架, Gin, 教程, 项目搭建, 后端开发, 依赖注入]
 description: 本教程将指导您如何使用Gone框架从零开始搭建一个功能完备的Web项目。学习Gone的基本用法、项目结构和组件化开发，快速上手Go语言Web开发。
