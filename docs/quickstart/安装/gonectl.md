@@ -1,8 +1,8 @@
 ---
-slug: /quickstart/install/gonectl
 sidebar_position: 1
-title: gonectl 安装
 hide_title: true
+slug: /quickstart/install/gonectl
+title: gonectl 安装
 keywords: ["gonectl", "gone脚手架", "项目生成器", "开发工具", "命令行工具"]
 description: "gonectl 是 gone 框架的官方脚手架工具，本文详细介绍了如何通过多种方式安装和配置 gonectl，帮助开发者快速搭建 gone 项目框架。"
 ---

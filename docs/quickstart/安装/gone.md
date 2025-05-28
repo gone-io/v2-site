@@ -1,7 +1,7 @@
 ---
-slug: /quickstart/install/gone
-hide_title: true
 sidebar_position: 2
+hide_title: true
+slug: /quickstart/install/gone
 title: gone 安装
 keywords: ["gone", "golang", "依赖管理", "go modules", "安装教程"]
 description: "本文详细介绍了如何在项目中安装和配置 gone 框架，包括环境准备、依赖管理以及常见问题解决方案。"

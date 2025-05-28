@@ -1,7 +1,8 @@
 ---
+sidebar_position: 3
+hide_title: true
 slug: /quickstart/install/goner
 title: goner 组件安装
-sidebar_position: 3
 keywords: ["goner", "gone组件", "组件安装", "插件系统", "模块化开发"]
 description: "goner 是 gone 框架的组件系统，本文介绍如何使用 gonectl 工具安装和管理官方及第三方 goner 组件，帮助开发者实现模块化开发。"
 ---
