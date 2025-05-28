@@ -1,7 +1,8 @@
 ---
+sidebar_position: 1
+hide_title: true
 slug: /quickstart/inject
 title: 依赖注入
-sidebar_position: 1
 keywords: [Gone框架, 依赖注入, IoC容器, 组件管理, 自动装配, Go语言]
 description: Gone框架的依赖注入系统让组件管理变得简单高效。通过简单的标签声明，实现自动的依赖创建、注入和生命周期管理。
 ---
