@@ -33,14 +33,17 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh',
-    locales: ['zh', 'en'],
-    localeConfigs: {
-      en: {
-        htmlLang: 'en-GB',
-      },
-      zh: {
-      },
-    },
+    locales: [
+      'zh',
+      // 'en',
+    ],
+    // localeConfigs: {
+    //   en: {
+    //     htmlLang: 'en-GB',
+    //   },
+    //   zh: {
+    //   },
+    // },
   },
 
   presets: [
@@ -98,13 +101,13 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorial',
             position: 'left',
-            label: '指南',
+            label: '开发指南',
           },
           {
             type: 'docSidebar',
             sidebarId: 'components',
             position: 'left',
-            label: '组件',
+            label: '组件参考',
           },
           {
             to: '/blog',

@@ -1,14 +1,14 @@
 ---
-sidebar_position: 7
+sidebar_position: 12
 hide_title: true
-title: 使用配置
+title: 注册中心
 keywords:
 - Gone
 - Gone框架
 description: 配置
 ---
 
-# 使用配置
+# 注册中心
 
 
 import DocCardList from '@theme/DocCardList';
