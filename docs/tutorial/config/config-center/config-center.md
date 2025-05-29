@@ -9,3 +9,7 @@ description: 配置
 ---
 
 # 配置中心
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
