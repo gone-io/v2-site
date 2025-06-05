@@ -15,10 +15,9 @@ jobs:
       run: |
         npm install
         npm run-script build
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+    - name: Deploy to github pages
+      uses: peaceiris/actions-gh-pages@v4
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        cname: goner.fun
