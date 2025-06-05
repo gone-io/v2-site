@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 hide_title: true
-title: 使用配置
+title: 日志管理
 keywords:
 - Gone
 - Gone框架
