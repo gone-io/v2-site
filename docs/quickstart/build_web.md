@@ -22,7 +22,7 @@ go install github.com/gone-io/gonectl@latest
 
 安装完成后，你可以在终端中输入`gonectl`来验证是否安装成功。
 
-更多安装方法，参考[gonectl安装](./安装/gonectl.md)
+更多安装方法，参考[gonectl安装](./install/gonectl.md)
 
 ## 2. 创建项目
 

@@ -27,5 +27,5 @@ type Foo struct {
 
 这样你就不用自己手动创建和管理这些依赖关系了。
 
-更多内容参考 [gone的依赖注入详解](/docs/tutorial/inject)
+更多内容参考 [gone的依赖注入详解](/docs/tutorial/injection.md)
 
