@@ -149,6 +149,26 @@ logger:
     log-name: "my-log-name"
 ```
 
+## 高级用法
+### 自定义日志编码器
+
+```go
+type CustomerLogEncoder struct {
+    gone.Flag
+    zapcore.Encoder
+}
+// 实现zapcore.Encoder接口
+
+
+// 加载到gone框架中
+func init() {
+    gone.Load(&CustomerLogEncoder{})
+}
+```
+:::tip
+需要注意，在注入了自定义日志编码器后，`log.encoder` 配置将失效。
+:::
+
 ## 日志收集
 除了前面通过opentelemetry的exporter收集日志外；在云原生环境下，日志收集的核心方案是通过​​DaemonSet部署采集代理（如Fluentd/Filebeat/Promtail/Loggie）​​，
 自动采集节点上容器的标准输出或挂载目录的日志，并注入Kubernetes元数据标签，最终结合流处理层（如Kafka/Flink）和存储系统（如Elasticsearch/Loki）实现高效管理。
