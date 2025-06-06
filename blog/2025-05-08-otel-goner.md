@@ -58,7 +58,7 @@ go run .
 > ```bash
 > gonectl install goner/otel/tracer
 > ```
-
+<!-- truncate -->
 ## 运行效果展示
 
 执行后你将在控制台看到类似如下的追踪数据（已简化）：

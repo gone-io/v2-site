@@ -87,6 +87,8 @@ type EnvConfigure struct {
    - 环境变量缺失时使用默认值
    - 支持在标签中定义自定义默认值
 
+<!-- truncate -->
+
 ## 使用示例
 
 ### 基本配置注入
