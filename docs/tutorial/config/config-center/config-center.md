@@ -27,6 +27,8 @@ goner组件已经支持多种配置中心的使用，包括：
 这些配置组件，都组合了goner/viper组件读取本地配置文件的能力，所以你可以使用goner/viper组件的方式读取本地配置文件。
 :::
 
+## 组件列表
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
