@@ -1,14 +1,14 @@
 ---
 sidebar_position: 3
 hide_title: true
-title: 配置中心
+title: 配置中心/远程配置
 keywords:
 - Gone
 - Gone框架
 description: 配置
 ---
 
-# 配置中心
+# 配置中心/远程配置
 
 ## 支持的配置中心
 goner组件已经支持多种配置中心的使用，包括：

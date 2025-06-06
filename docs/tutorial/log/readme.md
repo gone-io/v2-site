@@ -5,7 +5,10 @@ title: 日志管理
 keywords:
 - Gone
 - Gone框架
-description: 配置
+- 日志管理
+- Logger
+- 日志组件
+description: Gone框架的日志管理功能介绍，包括内置Logger接口定义、日志级别配置以及日志组件的使用方法
 ---
 
 # 日志管理
@@ -56,8 +59,12 @@ func Load(loader gone.Loader) error {
 ```
 :::
 
+## 内核日志组件
+### 支持设置日志级别
+配置的key为`log.level`, 默认级别为`info`，支持的级别为`debug`, `info`, `warn`, `error`。
+
 ## goner/zap 组件
-goner/zap 组件是一个日志组件，基于zap实现。
+goner/zap 组件是基于zap实现的goner组件。
 
 
 import DocCardList from '@theme/DocCardList';
