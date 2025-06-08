@@ -82,6 +82,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
 
+
+
+      tableOfContents: {
+        minHeadingLevel: 2, // 最小标题层级（默认 H2）
+        maxHeadingLevel: 4, // 最大展示到 H4 标题
+      },
+
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -91,23 +98,22 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'quickstart',
+          //   position: 'left',
+          //   label: '快速开始',
+          // },
           {
-            type: 'docSidebar',
-            sidebarId: 'quickstart',
+            to: '/docs/devguide/part1/quickstart',
             position: 'left',
-            label: '快速开始',
+            label: '快速入门',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorial',
+            sidebarId: 'devguide',
             position: 'left',
             label: '开发指南',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'components',
-            position: 'left',
-            label: '组件参考',
           },
           {
             to: '/blog',

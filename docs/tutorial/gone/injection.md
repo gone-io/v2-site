@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 hide_title: true
-title: 依赖注入详解
+title: 依赖注入
 keywords:
 - Gone框架
 - 依赖注入
@@ -16,7 +16,7 @@ keywords:
 description: Gone框架是Go语言的强大依赖注入框架，提供松耦合架构、自动装配、配置注入等功能。支持结构体注入、函数参数注入，助力构建可测试的企业级应用。
 ---
 
-# 依赖注入详解
+# 依赖注入
 
 ## 什么是依赖注入？
 
