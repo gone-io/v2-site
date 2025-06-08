@@ -3,8 +3,16 @@ sidebar_position: 1
 hide_title: true
 title: 1.1 Gone框架简介
 keywords:
-- Gone框架
-description: Gone框架是Go语言的强大依赖注入框架，提供松耦合架构、自动装配、配置注入等功能。支持结构体注入、函数参数注入，助力构建可测试的企业级应用。
+- Gone框架简介
+- Go依赖注入
+- 控制反转
+- 轻量级框架
+- 可测试性
+- 微服务架构
+- Web应用开发
+- 企业级应用
+- 框架对比
+description: Gone框架全面介绍：基于Go语言的轻量级依赖注入框架，通过控制反转实现松耦合架构。了解框架特点、适用场景，以及与Gin、Echo、Beego等主流Go框架的对比分析。
 ---
 
 # 1.1 Gone框架简介

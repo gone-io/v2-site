@@ -3,8 +3,16 @@ sidebar_position: 2
 hide_title: true
 title: 1.2 Gone框架架构设计
 keywords:
-- Gone框架
-description: Gone框架是Go语言的强大依赖注入框架，提供松耦合架构、自动装配、配置注入等功能。支持结构体注入、函数参数注入，助力构建可测试的企业级应用。
+- Gone框架架构
+- 依赖注入机制
+- Goner接口
+- 核心组件
+- 生命周期管理
+- Application
+- 组件管理
+- 函数参数注入
+- 结构体注入
+description: 深入了解Gone框架的核心架构设计，包括Goner接口、核心组件、依赖注入机制和完整的生命周期管理。掌握Application的创建、启动和停止流程，以及组件间的依赖关系处理。
 ---
 
 # 1.2 Gone框架架构设计
@@ -162,7 +170,7 @@ Application是一个结构体，代表一个应用程序，它包含一个core�
       //...
   }
   ```
-  2. 为了使用方便，框架还提供了一个**Application**实例的全局变量`Default`。
+  2. 为了使用方便，框架还提供了一个**Application**实例的全局变量`Default`。同样为了方便使用，在Gone框架中定义了一些和Application方法同名的全局函数，比如`Load`、`Loads`、`Run`等，他们都是直接调用Default实例上的对应方法。
   ```go
   var Default = NewApp()
   ```

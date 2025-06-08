@@ -3,8 +3,17 @@ sidebar_position: 2
 hide_title: true
 title: 1.3 开发环境准备
 keywords:
-- Gone框架
-description: Gone框架是Go语言的强大依赖注入框架，提供松耦合架构、自动装配、配置注入等功能。支持结构体注入、函数参数注入，助力构建可测试的企业级应用。
+- Go环境配置
+- Gone框架安装
+- gonectl脚手架
+- 开发工具
+- GoLand
+- VS Code
+- 调试工具
+- 项目管理
+- 代码质量
+- 开发环境
+description: Gone框架开发环境完整配置指南：Go语言环境搭建、Gone框架安装、gonectl脚手架工具使用，以及推荐的IDE、调试工具和代码质量工具配置，助您快速搭建高效的Gone开发环境。
 ---
 
 
